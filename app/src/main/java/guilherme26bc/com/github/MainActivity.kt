@@ -20,12 +20,28 @@ class MainActivity : ComponentActivity() {
         setContent {
             FundamentosJetpackComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Text(
-                        text = getString(R.string.hello_world),
-                        modifier = Modifier.padding(innerPadding)
+                    TextoCustomizado(
+                        "Primeira função composable",
+                        Modifier.padding(innerPadding)
                     )
                 }
             }
+        }
+    }
+
+    @Composable
+    fun TextoCustomizado(texto: String, modifier: Modifier = Modifier) {
+        Text(
+            text = texto,
+            modifier = modifier.fillMaxSize()
+        )
+    }
+
+    @Preview
+    @Composable
+    fun Preview() {
+        FundamentosJetpackComposeTheme {
+            TextoCustomizado("Primeira função composable")
         }
     }
 }
