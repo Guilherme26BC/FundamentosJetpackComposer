@@ -33,6 +33,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import guilherme26bc.com.github.componentes.SimpleText
+import guilherme26bc.com.github.componentes.SimpleTextField
 import guilherme26bc.com.github.ui.theme.FundamentosJetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,7 +44,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             FundamentosJetpackComposeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                   CardMensagem(Modifier.padding(innerPadding))
+//                   CardMensagem(Modifier.padding(innerPadding))
+                    SimpleTextField(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
